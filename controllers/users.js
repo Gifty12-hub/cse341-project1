@@ -10,12 +10,10 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
-    const userId = req.params.id;
-    const results = await mongodb.getDatabase().db().collection('users').find({_id: userId});
-    results.toArray().then((users) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users[0]);
-    });  
+    const userId = new ObjectId(req.params.id);  // ✅ convert to ObjectId
+    const result = await mongodb.getDatabase().db().collection('users').findOne({_id: userId});  // ✅ findOne
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(result);
 };
 
 module.exports = {
