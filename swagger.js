@@ -6,7 +6,7 @@ const doc = {
         title: 'Contacts API',
         description: 'API for managing user contacts'
     },
-    host: 'localhost:3000',   // ← swap this for your Render URL before deploying
+    host: 'cse341-project1-a0aa.onrender.com',   // ← swap this for your Render URL before deploying
     schemes: ['http']         // ← swap to ['https'] for Render
 };
 
