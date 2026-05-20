@@ -7,7 +7,7 @@ const doc = {
         description: 'API for managing user contacts'
     },
     host: 'cse341-project1-a0aa.onrender.com',   // ← swap this for your Render URL before deploying
-    schemes: ['http']         // ← swap to ['https'] for Render
+    schemes: ['https']         // ← swap to ['https'] for Render
 };
 
 const outputFile = './swagger-output.json';   // auto-generated, do not edit by hand
